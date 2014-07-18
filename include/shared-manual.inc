@@ -418,21 +418,7 @@ function manual_setup($setup) {
         "next" => $setup["next"],
         "cache" => $lastmod,
     );
-    site_header($setup["this"][1] . " - Manual ", $config);
-    
-    $id = substr($setup['this'][0], 0, -4);
-    $language_chooser = 'manual_language_chooser';
-    echo <<<PAGE_TOOLS
-  <div class="page-tools">
-    <div class="change-language">
-      {$language_chooser($config['lang'], $config['thispage'])}
-    </div>
-    <div class="edit-bug">
-      <a href="https://edit.php.net/?project=PHP&amp;perm={$config['lang']}/{$config['thispage']}">Edit</a>
-      <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=$id">Report a Bug</a>
-    </div>
-  </div>
-PAGE_TOOLS;
+    site_header($setup["this"][1] . " - Manual ", $config);    
 }
 
 function manual_language_chooser($currentlang, $currentpage) {
@@ -461,7 +447,6 @@ function manual_language_chooser($currentlang, $currentpage) {
     $r = <<<CHANGE_LANG
       <form action="/manual/change.php" method="get" id="changelang" name="changelang">
         <fieldset>
-          <label for="changelang-langs">Change language:</label>
           <select onchange="document.changelang.submit()" name="page" id="changelang-langs">
             {$format_options($links)}
             <option value="help-translate.php">Other</option>

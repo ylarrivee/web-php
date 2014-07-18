@@ -21,13 +21,6 @@
 .clearfix:after {
   clear: both;
 }
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
 article,
 aside,
 details,
@@ -50,11 +43,13 @@ video {
 audio:not([controls]) {
   display: none;
 }
+
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
+
 a {
   border-bottom:1px solid;
 }
@@ -66,6 +61,7 @@ a:hover,
 a:active {
   outline: 0;
 }
+
 sub,
 sup {
   position: relative;
@@ -82,6 +78,7 @@ sub {
 pre {
   white-space:pre-wrap;
 }
+
 #map_canvas img,
 .google-maps img {
   max-width: none;
@@ -169,20 +166,13 @@ textarea {
 }
 
 .navbar .brand {
-  margin-right:.75rem;
+  margin-right:1.5rem;
   float: left;
   display: block;
-  height: 1.5rem;
-  padding: .75rem .75rem .75rem 1.5rem;
-}
-.navbar .brand:hover,
-.navbar .brand:focus {
-  text-decoration: none;
 }
 .navbar-search {
   position: relative;
   float: left;
-  margin-top: .625rem;
   margin-bottom: 0;
   width:100%;
   -moz-box-sizing:border-box;
@@ -206,11 +196,7 @@ textarea {
   margin: 0 10px 0 0;
 }
 .navbar .nav > li {
-  float: left;
-}
-.navbar .nav > li > a {
-  float: none;
-  padding: .75rem;
+  display:inline-block;
 }
 @-ms-viewport {
   width: device-width;
@@ -281,7 +267,7 @@ textarea {
 }
 
 body, input, textarea {
-    font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 code,
@@ -299,12 +285,12 @@ dl code {
 }
 
 body {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding-left:0;
-    padding-right:0;
-    padding-bottom:0;
-    margin:0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-left:0;
+  padding-right:0;
+  padding-bottom:0;
+  margin:0;
 }
 
 button,
@@ -327,7 +313,7 @@ input[type="search"] {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 3rem;
-  margin:0 0 1.5rem;
+  margin:0;
   overflow:hidden;
   text-rendering: optimizeLegibility;
 }
@@ -389,24 +375,26 @@ hr {
     padding:0;
     opacity:.75;
     border: 0;
+  vertical-align:middle;
 }
 .navbar a {
     border:0;
 }
 
-.navbar {
-  border-bottom:.25rem solid;
+body > .navbar {
   overflow: visible;
   *position: relative;
   *z-index: 2;
+  font-size:1.5rem;
+  line-height:4rem;
 }
 
 .page-tools {
-  margin-left:1.5rem;
-  float: right;
   text-align: right;
-  position: relative;
-  z-index: 100;
+  margin-bottom:1.5rem;
+}
+.page-tools #changelang-langs {
+  width:100%;
 }
 .page-tools #changelang-langs,
 .page-tools .edit-bug {
@@ -569,12 +557,11 @@ pre.info {
 }
 
 .layout-menu {
-    padding:.75rem 1.5rem 1.5rem;
+    padding:1.5rem 1.5rem;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
 #layout-content {
-  padding:1.5rem;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
@@ -991,7 +978,8 @@ fieldset {
     list-style:none;
 }
 .navbar a {
-    display:inline-block;
+  display:inline-block;
+  margin-right:1.5rem;
 }
 
 /* {{{ Typeahead search results */
@@ -1173,9 +1161,6 @@ fieldset {
   position:relative;
   clear:both;
 }
-header.title {
-  margin-bottom:1.5rem;
-}
 .title a {
   border:0;
 }
@@ -1194,7 +1179,12 @@ header.title {
 }
 
 .refentry .refsect1 {
-  margin-bottom:3rem;
+  margin-bottom:1px;
+  padding:1rem 1.5rem;
+}
+
+.refentry .refsect1 > *:last-child {
+  margin-bottom:0;
 }
 
 /* {{{ General styles (p, parameters, initializers, ...) */
@@ -1476,9 +1466,10 @@ div.soft-deprecation-notice blockquote.sidebar {
   display:none;
 }
 #breadcrumbs ul {
-    margin:0;
-    padding:0 .5rem 0 1.5rem;
-    overflow: hidden;
+  margin:0 auto;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  overflow: hidden;
 }
 #breadcrumbs div {
     padding:0 1.5rem;
@@ -1508,7 +1499,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     transform: translateZ(0);
   }
   body {
-    margin:3.25rem 0 0;
+    margin:4rem 0 0;
   }
   #breadcrumbs {
     display:block;
@@ -1550,7 +1541,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 @media (min-width: 1200px) {
   #intro .container,
   .navbar-inner,
-  #breadcrumbs,
+  #breadcrumbs .breadcrumbs-container,
   #goto div,
   #trick div,
   #layout,
@@ -1673,6 +1664,8 @@ div.soft-deprecation-notice blockquote.sidebar {
 @media (min-width:768px) {
   #topsearch {
     float:right;
+    margin-top:.625rem;
+    height:3rem;
   }
   .navbar-search .search-query {
     width:100%;
@@ -1772,7 +1765,6 @@ aside.tips .panel .headline {
   border-bottom:0;
   line-height: 1.5rem;
   font-size:1.125rem;
-  color:#E6E6E6;
   text-rendering: optimizeLegibility;
 }
 /* Announcement Area */
@@ -1812,10 +1804,6 @@ aside.tips div.inner {
 /* {{{ News */
 .newsentry header h2 {
   margin:0;
-}
-.newsentry {
-  margin: 0 0 3rem;
-  position: relative;
 }
 .newsentry h2 {
   font-weight:normal;

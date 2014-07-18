@@ -126,6 +126,7 @@ if (!isset($config["languages"])) {
 
 <?php if (!empty($config['breadcrumbs'])): ?>
   <div id="breadcrumbs" class="clearfix">
+    <ul class="breadcrumbs-container">
     <?php if (isset($config['next'])): ?>
       <div class="next">
         <a href="<?php echo $config['next'][0]; ?>">
@@ -140,7 +141,6 @@ if (!isset($config["languages"])) {
         </a>
       </div>
     <?php endif; ?>
-    <ul class="breadcrumbs-container">
       <?php
           $breadcrumbs = $config['breadcrumbs'];
           $last = array_pop($breadcrumbs);

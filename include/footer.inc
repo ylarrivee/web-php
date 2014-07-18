@@ -9,7 +9,22 @@
     ?>
 <?php if (!empty($config['related_menu'])): ?>
     <aside class='layout-menu'>
-    
+   
+<?php 
+    $id = substr($setup['this'][0], 0, -4);
+    $language_chooser = 'manual_language_chooser';
+    echo <<<PAGE_TOOLS
+  <div class="page-tools">
+    <div class="change-language">
+      {$language_chooser($config['lang'], $config['thispage'])}
+    </div>
+    <div class="edit-bug">
+      <a href="https://edit.php.net/?project=PHP&amp;perm={$config['lang']}/{$config['thispage']}">Edit</a>
+      <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=$id">Report a Bug</a>
+    </div>
+  </div>
+PAGE_TOOLS;
+?>
         <ul class='parent-menu-list'>
             <?php foreach($config['related_menu'] as $section): ?>
             <li>
