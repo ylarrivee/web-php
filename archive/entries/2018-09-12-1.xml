@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo Montreal 2019 - Call for Papers is Now Open!</title>
+  <id>http://php.net/archive/2018.php#id2018-09-12-1</id>
+  <published>2018-09-12T22:49:47-04:00</published>
+  <updated>2018-09-12T22:49:47-04:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2018-09-24</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2018-09-12-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://confoo.ca/en/yul2019/call-for-papers" title="ConFoo Montreal 2019">yul2019-phpnet.png</default:newsImage>
+  <link href="https://confoo.ca/en/yul2019/call-for-papers" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     ConFoo is one of the most important developer-oriented conferences loaded with PHP content. ConFoo 2019 will be held on March 13-15 in Montreal, Canada.
+     
+     The team just opened its call for papers. Candidates can submit proposals until September 24. Consult the <a href="https://confoo.ca/en/yul2019/call-for-papers">call for papers page</a> for details and to start submitting. That page also explains what expenses ConFoo can cover for speakers. You can even get <a href="https://confoo.ca/en/yul2019/call-for-papers/guidelines">advice</a> on how to write proposals.
+     
+     The call for papers is public, meaning that all proposals get published on the website for others to vote and comment on. This approach allows the organizers to pick subjects that have most interest in the community. The comments are only visible to speakers and organizers to avoid influencing the votes.
+     
+     To stay in touch via Twitter, follow <a href="http://twitter.com/confooca">@confooca</a> and use the <a href="http://twitter.com/#!/search/%23confoo">#confoo</a> tag.
+    </div>
+  </content>
+</entry>
